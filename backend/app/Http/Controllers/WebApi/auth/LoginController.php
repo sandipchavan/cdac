@@ -69,7 +69,7 @@ class LoginController extends Controller
     protected function all(){
         try {
             $user=auth()->userOrFail();
-            return response()->json($user,200);
+            return response()->json([$user,auth()->payload()->toArray()],200);
         } catch (\Throwable $th) {
              return response()->json('exception occured', 200);
         }
