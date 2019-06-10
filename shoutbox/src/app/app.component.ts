@@ -27,6 +27,6 @@ export class AppComponent {
     )
   }
   onsubmit3(){
-
+    localStorage.setItem('access_token',"eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MDEwNzMwMiwiZXhwIjoxNTYwMTEwOTAyLCJuYmYiOjE1NjAxMDczMDIsImp0aSI6IkQ2Y0d6cnJmRnFkV3FRTlYiLCJzdWIiOjUsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ");
   }
 }

@@ -17,4 +17,7 @@ export class UserService {
   feeds():Observable<any>{
     return this._http.get<any>('http://localhost:8000/api/all');
   }
+  isUserLoggedIn():boolean{
+    return (localStorage.getItem('access_token')===null) ? false : true;
+  }
 }
