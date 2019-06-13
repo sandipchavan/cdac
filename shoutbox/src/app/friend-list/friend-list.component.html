@@ -19,5 +19,49 @@
     </a>
 
   </div>
+  https://medium.com/engineering-on-the-incline/reloading-current-route-on-click-angular-5-1a1bfc740ab2
+  https://stackoverflow.com/questions/40983055/how-to-reload-the-current-route-with-the-angular-2-router
 </div> -->
-<h1>friend list works</h1>
+<mat-list>
+  <mat-list-item *ngFor="let f of friends">
+    <img matListAvatar src="https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/1552082427700-9FU7164WY5OU0FFAP6M8/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/image-asset.jpeg?format=2500w" alt="...">
+    <h3 matLine> <a href="">sandip</a> </h3>
+    <p matLine>
+      <span> subject </span>
+      <span class="demo-2"> -- hello hiiiee </span>
+    </p>
+  </mat-list-item>
+</mat-list>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Personal data
+      </mat-panel-title>
+      <mat-panel-description>
+        Type your name and age
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="First name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Age">
+    </mat-form-field>
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel>
+</mat-accordion>

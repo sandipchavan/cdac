@@ -5,6 +5,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+//material
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule,MatListModule, MatListIconCssMatStyler, MatIconModule, MatExpansionModule, MatFormFieldModule, MatFormFieldControl, MatInputModule} from '@angular/material';
 
 //JWT tokenization
 import { JwtModule } from '@auth0/angular-jwt';
@@ -32,7 +35,7 @@ export function tokenGetter() {
     HomeComponent,
     FriendListComponent
   ],
-  imports: [
+  imports: [BrowserAnimationsModule,MatButtonModule, MatCheckboxModule,MatListModule,MatIconModule,MatExpansionModule,MatFormFieldModule,MatInputModule,
     BrowserModule,
     AppRoutingModule,HttpClientModule,
     JwtModule.forRoot({

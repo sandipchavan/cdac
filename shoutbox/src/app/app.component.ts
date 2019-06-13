@@ -1,5 +1,7 @@
 import { UserService } from './user.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private _userService:UserService){}
+  constructor(private _userService:UserService, private router:Router){}
   title = 'shoutbox';
 
   onsubmit(){
@@ -29,4 +31,8 @@ export class AppComponent {
   onsubmit3(){
     localStorage.setItem('access_token',"eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU2MDEwNzMwMiwiZXhwIjoxNTYwMTEwOTAyLCJuYmYiOjE1NjAxMDczMDIsImp0aSI6IkQ2Y0d6cnJmRnFkV3FRTlYiLCJzdWIiOjUsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ");
   }
+  onsubmit4(){
+    this.router.navigate(['/friendlist'])
+  }
+
 }

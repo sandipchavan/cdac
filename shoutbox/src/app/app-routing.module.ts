@@ -15,12 +15,8 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent,canActivate:[IsUserLoggedOutGuard]},
   {path:'login', component:LoginComponent, canActivate:[IsUserLoggedOutGuard]},
   {path:'feeds', component:FeedsComponent,canActivate:[IsLoggedInGuard], canActivateChild:[IsLoggedInGuard],
-  children:[
-
-    { path: 'friends', component:FriendListComponent},
-    { path: 'friend/:fid', component:FriendComponent}
-  ]},
-
+  },
+{path:'friendlist',component:FriendListComponent},
   {path:'**',component:HomeComponent}
 ];
 
